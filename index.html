@@ -1,12 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Vishnu Karunakaran</title>
-  <!-- (rest of your <head> section remains the same) -->
+  <meta charset="UTF-8">
+  <title>Vishnu Karunakaran | Filmmaker Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Vishnu Karunakaran – Filmmaker, Director, Writer, and Cinematographer. Explore films, achievements, education, and contact details.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=PT+Serif:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-bg: #111017;
+      --accent: #FFA600;
+      --section-bg: #211F2A;
+      --text: #F6F6F6;
+      --sub-text: #B5B5C3;
+    }
+    html,body { box-sizing: border-box; height:100%; }
+    body {
+      margin: 0; padding: 0;
+      min-height: 100vh;
+      background: var(--main-bg);
+      color: var(--text);
+      font-family: 'Montserrat', Arial, sans-serif;
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(90deg, #12101C 60%, #22203A 120%);
+      padding: 38px 16px 28px;
+      text-align: center;
+    }
+    .name { font-size: 2.6em; font-weight: 700; letter-spacing: 1px; margin:0;}
+    .title { color: var(--accent); font-size:1.2em; margin-top: 6px; }
+    nav {
+      margin: 20px 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+      font-size: 1em;
+    }
+    nav a:hover { color: var(--accent); }
+    main {
+      max-width: 870px;
+      margin: 30px auto 0;
+      padding: 0 14px 32px;
+    }
+    section {
+      background: var(--section-bg);
+      border-radius: 16px;
+      box-shadow: 0 4px 24px #0006;
+      margin-bottom: 28px;
+      padding: 32px 28px 24px;
+      animation: fadeIn 1.7s;
+    }
+    section h2 {
+      margin-top:0;
+      font-family: 'PT Serif', serif;
+      color: var(--accent);
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+      font-size: 1.6em;
+      font-weight: 700;
+      text-shadow: 0 2px 12px #0005;
+    }
+    ul,ol{ padding-left: 24px; }
+    .split {
+      display: flex;
+      gap: 45px;
+      flex-wrap: wrap;
+    }
+    .split > div { flex:1 1 300px; min-width:260px;}
+
+    .exp-role { font-weight: bold; color: var(--accent); margin-bottom:3px;}
+    .exp-org { color: var(--sub-text);}
+    .ach-list li { margin-bottom:6px;}
+    .film-list { display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+    .film-card {
+      background:#120e1d; border-radius:9px; padding:14px 19px 12px; box-shadow:0 0 7px #0007;
+      margin-bottom:7px;
+    }
+    .film-title { font-weight:bold; margin-bottom:4px; font-size:1.1em;}
+    .film-roles { font-size:0.96em; color:#ffa600cc; margin-bottom:4px;}
+    .film-desc {color:var(--sub-text); font-size:0.97em;}
+    .festival-list li { margin-bottom:4px;}
+    .skills { display: flex; flex-wrap: wrap; gap: 12px; margin:10px 0 0;}
+    .skill {background: #201b2c; color: #FFA600; border-radius: 14px; padding: 7px 16px; font-size: 1em;}
+
+    .contact-flex {
+      display:flex;flex-direction:column;gap:9px;font-size:1.08em;
+    }
+    .label {color:var(--accent);}
+    .subtitle { color: var(--sub-text); font-size:1.07em;}
+    footer {
+      text-align:center; color:var(--sub-text); font-size:0.99em; margin:20px 0 0;
+      border-top:1px solid #36304B; padding:18px 0 7px;
+    }
+    @media (max-width:600px){
+      .film-list { grid-template-columns:1fr; }
+      section {padding:20px 7px 17px;}
+      .split {gap:14px;}
+    }
+    @keyframes fadeIn { 0%{ opacity: 0; transform:translateY(40px);} 100%{ opacity: 1; transform:translateY(0);} }
+  </style>
 </head>
 <body>
-  <h1>Vishnu Karunakaran</h1>
-  <!-- (rest of your page remains the same) -->
+  <header>
+    <div class="name">Vishnu Karunakaran</div>
+    <div class="title">Filmmaker &amp; Storyteller</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#films">Films</a>
+      <a href="#awards">Achievements</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <div class="split">
+        <div>
+          <span class="subtitle">
+            Passionate filmmaker, director, writer, and cinematographer, known for storytelling that bridges cultures and emotions. Constantly exploring new perspectives through the lens and narrative, creating works that have resonated at prestigious festivals world-wide.
+          </span>
+          <ul>
+            <li><b>MA in Media Business Studies</b>, Indian Institute of Mass Communication</li>
+            <li><b>BA in Journalism &amp; Mass Communication</b>, The English and Foreign Languages University</li>
+          </ul>
+        </div>
+        <div>
+          <div class="exp-role">Creative Minds of Tomorrow (IFFI)</div>
+          <div class="exp-org">Director, ‘Khali Khopadi’ (NFDC, 2023)</div>
+          <div style="margin-top:13px;">
+            <div class="exp-role">Boxedge Solutions</div>
+            <div class="exp-org">Assistant Director – Advertising, Social Content</div>
+          </div>
+          <div style="margin-top:13px;">
+            <div class="exp-role">Janayugam Publications</div>
+            <div class="exp-org">Video Editor, Poster Designer, Content Management</div>
+          </div>
+          <div style="margin-top:13px;">
+            <div class="exp-role">Edible Archives (Kochi-Muziris Biennale)</div>
+            <div class="exp-org">Intern: Social Media, Photography, Videography</div>
+          </div>
+          <div style="margin-top:13px;">
+            <div class="exp-role">KIIDC Documentary</div>
+            <div class="exp-org">Director – Kerala Irrigation Infrastructure Development Corp.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="films">
+      <h2>Film Projects</h2>
+      <div class="film-list">
+        <div class="film-card">
+          <div class="film-title">Khali Khopadi <span style="color:#FFA600;font-size:0.85em;">(Short Film)</span></div>
+          <div class="film-roles">Director</div>
+          <div class="film-desc">
+            Selected for IFFI’s Creative Minds of Tomorrow; produced by NFDC. Special mention for cinematography at IFFI.
+          </div>
+        </div>
+        <div class="film-card">
+          <div class="film-title">Karkkidakavaru <span style="color:#FFA600;font-size:0.85em;">(Short Film)</span></div>
+          <div class="film-roles">Director, Writer, Producer</div>
+          <div class="film-desc">
+            Special Jury Award for Best Indian Short Film at Aiyan Film Awards. Official selection at 10+ international festivals.
+          </div>
+        </div>
+        <div class="film-card">
+          <div class="film-title">Shanshray <span style="color:#FFA600;font-size:0.85em;">(Short Film)</span></div>
+          <div class="film-roles">Director</div>
+        </div>
+        <div class="film-card">
+          <div class="film-title">Koma <span style="color:#FFA600;font-size:0.85em;">(Short Film)</span></div>
+          <div class="film-roles">Cinematographer</div>
+        </div>
+        <div class="film-card">
+          <div class="film-title">Ammakkadu <span style="color:#FFA600;font-size:0.85em;">(Music Video)</span></div>
+          <div class="film-roles">Cinematographer</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards">
+      <h2>Achievements</h2>
+      <ul class="ach-list">
+        <li>Special mention for cinematography – <b>Khali Khopadi</b> at IFFI’s Creative Minds of Tomorrow.</li>
+        <li>Special Jury Award, Best Indian Short Film – <b>Karkkidakavaru</b>, Aiyan Film Awards.</li>
+        <li>Official selections for <b>Karkkidakavaru</b>: 
+          <ul class="festival-list">
+            <li>Fourth Meihodo International Youth Visual Media Festival (MIYVMF)</li>
+            <li>Lift-Off Global Network (First Time Filmmaker Sessions)</li>
+            <li>Thriprayar International Film Festival</li>
+            <li>Cherry Orchard Film Festival, EFLU Shillong (Festival Focus Film)</li>
+            <li>Forplay Society’s Film Festival, Mattancherry</li>
+            <li>Kalakari Film Festival (Indore)</li>
+            <li>New Wave Film Festival (Calicut, Competition Section)</li>
+            <li>Anukalp Films Festival</li>
+            <li>One Earth Awards</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill">Film Direction</div>
+        <div class="skill">Scriptwriting</div>
+        <div class="skill">Cinematography</div>
+        <div class="skill">Video Editing</div>
+        <div class="skill">Content & Social Media</div>
+        <div class="skill">Poster Designing</div>
+        <div class="skill">Team Collaboration</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-flex">
+        <div><span class="label">Phone:</span> +91 8111851808</div>
+        <div><span class="label">Email:</span> <a href="mailto:delhi6vishnu@gmail.com" style="color:#ffa600; text-decoration:underline;">delhi6vishnu@gmail.com</a></div>
+        <div><span class="label">GitHub:</span> <a href="https://github.com/delhi6vishnu-netizen" style="color:#ffa600; text-decoration:underline;" target="_blank">delhi6vishnu-netizen</a></div>
+      </div>
+      <div class="subtitle" style="margin-top:19px;">Available for collaborations and new opportunities in filmmaking and media.</div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2026 Vishnu Karunakaran · Portfolio website created with 💡 by Copilot
+  </footer>
 </body>
 </html>
