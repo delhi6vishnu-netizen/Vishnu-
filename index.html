@@ -2,87 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Multi-Timezone Digital Clock</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #222;
-      color: #eee;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 40px;
-    }
-    h1 { margin-bottom: 30px; }
-    .clock-container {
-      display: flex;
-      gap: 30px;
-    }
-    .clock {
-      background: #444;
-      padding: 20px 40px;
-      border-radius: 10px;
-      box-shadow: 0 0 12px #0005;
-      text-align: center;
-      min-width: 200px;
-    }
-    .zone {
-      font-size: 1em;
-      margin-bottom: 8px;
-      letter-spacing: 1px;
-      color: #ffa500;
-    }
-    .time {
-      font-size: 2em;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-  </style>
+  <title>Vishnu Karunakaran</title>
+  <!-- (rest of your <head> section remains the same) -->
 </head>
 <body>
-  <h1>Multi-Timezone Digital Clock</h1>
-  <div class="clock-container">
-    <div class="clock">
-      <div class="zone">India (IST)</div>
-      <div class="time" id="time-ist">--:--:--</div>
-    </div>
-    <div class="clock">
-      <div class="zone">London (GMT/UK)</div>
-      <div class="time" id="time-london">--:--:--</div>
-    </div>
-    <div class="clock">
-      <div class="zone">New York (EST)</div>
-      <div class="time" id="time-ny">--:--:--</div>
-    </div>
-    <div class="clock">
-      <div class="zone">Tokyo (JST)</div>
-      <div class="time" id="time-tokyo">--:--:--</div>
-    </div>
-  </div>
-
-  <script>
-    function updateClocks() {
-      // IST: Asia/Kolkata, London: Europe/London, NY: America/New_York, Tokyo: Asia/Tokyo
-      const zones = [
-        {id: "time-ist", tz: "Asia/Kolkata"},
-        {id: "time-london", tz: "Europe/London"},
-        {id: "time-ny", tz: "America/New_York"},
-        {id: "time-tokyo", tz: "Asia/Tokyo"}
-      ];
-      for (const zone of zones) {
-        const now = new Date();
-        const options = { 
-          hour: '2-digit', 
-          minute: '2-digit',
-          second: '2-digit', 
-          hour12: false, 
-          timeZone: zone.tz
-        };
-        document.getElementById(zone.id).textContent = now.toLocaleTimeString('en-GB', options);
-      }
-    }
-    setInterval(updateClocks, 1000);
-    updateClocks();
-  </script>
+  <h1>Vishnu Karunakaran</h1>
+  <!-- (rest of your page remains the same) -->
 </body>
 </html>
