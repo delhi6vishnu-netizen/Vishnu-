@@ -1,57 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Vishnu Karunakaran – Portfolio</title>
+  <meta charset="UTF-8" />
+  <title>Multi-Timezone Digital Clock</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; background: #f7f7f7; color: #222; }
-    h1, h2 { color: #2c3e50; }
-    .contact, .section { background: #fff; padding: 16px 24px; margin-bottom: 18px; border-radius: 8px; }
-    ul { margin: 0 0 10px 24px; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #222;
+      color: #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+    h1 { margin-bottom: 30px; }
+    .clock-container {
+      display: flex;
+      gap: 30px;
+    }
+    .clock {
+      background: #444;
+      padding: 20px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px #0005;
+      text-align: center;
+      min-width: 200px;
+    }
+    .zone {
+      font-size: 1em;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+      color: #ffa500;
+    }
+    .time {
+      font-size: 2em;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
   </style>
 </head>
 <body>
-  <h1>Vishnu Karunakaran</h1>
-  <div class="contact">
-    <b>Phone:</b> +91 8111851808<br>
-    <b>Email:</b> <a href="mailto:delhi6vishnu@gmail.com">delhi6vishnu@gmail.com</a>
+  <h1>Multi-Timezone Digital Clock</h1>
+  <div class="clock-container">
+    <div class="clock">
+      <div class="zone">India (IST)</div>
+      <div class="time" id="time-ist">--:--:--</div>
+    </div>
+    <div class="clock">
+      <div class="zone">London (GMT/UK)</div>
+      <div class="time" id="time-london">--:--:--</div>
+    </div>
+    <div class="clock">
+      <div class="zone">New York (EST)</div>
+      <div class="time" id="time-ny">--:--:--</div>
+    </div>
+    <div class="clock">
+      <div class="zone">Tokyo (JST)</div>
+      <div class="time" id="time-tokyo">--:--:--</div>
+    </div>
   </div>
-  <div class="section">
-    <h2>Education</h2>
-    <ul>
-      <li><b>MA in Media Business Studies</b> – Indian Institute of Mass Communication</li>
-      <li><b>BA in Journalism and Mass Communication</b> – The English and Foreign Languages University</li>
-    </ul>
-  </div>
-  <div class="section">
-    <h2>Professional Experience & Projects</h2>
-    <p><b>Creative Minds of Tomorrow, IFFI</b>: Directed 'Khali Khopadi' produced by NFDC.</p>
-    <p><b>Assistant Director, Boxedge Solutions</b>: Advertising, content creation, management.</p>
-    <p><b>Social Media, Janayugam Publications</b>: Video editing, poster design, cross-team collaboration.</p>
-    <p><b>Intern, Edible Archives, Kochi-Muziris Biennale</b>: Social media management, photography, videography.</p>
-    <p><b>Documentary (KIIDC)</b>: Direction (Kerala Irrigation Infrastructure Development Corporation)</p>
-  </div>
-  <div class="section">
-    <h2>Film Projects</h2>
-    <ul>
-      <li><b>Khali Khopadi</b> (Short film) – Director</li>
-      <li><b>Karkkidakavaru</b> (Short film) – Director, Writer, Producer</li>
-      <li><b>Shanshray</b> (Short film) – Director</li>
-      <li><b>Koma</b> (Short film) – Cinematography</li>
-      <li><b>Ammakkadu</b> (Music Video) – Cinematography</li>
-    </ul>
-  </div>
-  <div class="section">
-    <h2>Achievements</h2>
-    <ul>
-      <li>'Khali Khopadi': Special mention for cinematography at IFFI</li>
-      <li>'Karkkidakavaru': Special Jury Award for Best Indian Short Film (Aiyan Film Awards)</li>
-      <li>Official selection at: MIYVMF, Liftoff Global Network, Thriprayar IFF, Cherry Orchard FF, Forplay Society FF, Kalakari FF, New Wave FF, Anukalp, One Earth Awards</li>
-    </ul>
-  </div>
-  <div class="section">
-    <h2>Skills</h2>
-    Film direction, scriptwriting, cinematography, video editing, poster designing, content and social media management, teamwork.
-  </div>
+
+  <script>
+    function updateClocks() {
+      // IST: Asia/Kolkata, London: Europe/London, NY: America/New_York, Tokyo: Asia/Tokyo
+      const zones = [
+        {id: "time-ist", tz: "Asia/Kolkata"},
+        {id: "time-london", tz: "Europe/London"},
+        {id: "time-ny", tz: "America/New_York"},
+        {id: "time-tokyo", tz: "Asia/Tokyo"}
+      ];
+      for (const zone of zones) {
+        const now = new Date();
+        const options = { 
+          hour: '2-digit', 
+          minute: '2-digit',
+          second: '2-digit', 
+          hour12: false, 
+          timeZone: zone.tz
+        };
+        document.getElementById(zone.id).textContent = now.toLocaleTimeString('en-GB', options);
+      }
+    }
+    setInterval(updateClocks, 1000);
+    updateClocks();
+  </script>
 </body>
 </html>
